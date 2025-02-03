@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Results</title>
+    <link rel="stylesheet" href="./CSS/exam_results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./img/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="./img/favicon_io/site.webmanifest">
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="site-title">Debre Birhan University - Exam Results</span>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Exam Results</h2>
+        <div id="results-container">
+            <label for="student-username">Username:</label>
+            <input type="text" id="student-username" name="student-username" required><br><br>
+            <label for="student-password">Password:</label>
+            <input type="password" id="student-password" name="student-password" required>
+            <i class="fas fa-eye" id="togglePassword"></i><br><br>
+            <button id="view-results">View Results</button>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Midterm</th>
+                        <th>Assignment</th>
+                        <th>Final</th>
+                        <th>Total</th>
+                        <th>Grade</th>
+                        <th>Comment</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <div id="gpa-section">
+                <h2>GPA Calculation</h2>
+                <p>Your GPA will be calculated based on the displayed results.</p>
+                <p id="calculated-gpa"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./JS/script.js"></script>
+    <script src="./JS/exam_results.js"></script>
+</body>
+
+</html>

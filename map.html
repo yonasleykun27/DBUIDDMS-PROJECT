@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map</title>
+    <link rel="stylesheet" href="./leaflet/leaflet.css" />
+    <link rel="stylesheet" href="./CSS/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link rel="icon" href="./img/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="./img/favicon_io/site.webmanifest">
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span class="site-title">Debre Birhan University Campus Map</span>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="building-selection">
+            <label for="category-select">Starting Point:</label>
+            <select id="category-select">
+                <option value="dormitory">Dormitory</option>
+                <option value="department">Department</option>
+                <option value="office">Office</option>
+                <option value="building">Building</option>
+                <option value="cafe">Cafe</option>
+                <option value="library">Library</option>
+            </select>  
+            <label for="location-select">Destination:</label>
+            <select id="location-select">
+            </select>
+        </div>
+        <div id="map-container">
+        </div>
+    </main>
+
+    <script src="./leaflet/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="./JS/map.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./CSS/dashboard.css">
+    <link rel="icon" href="./img/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="./img/favicon_io/site.webmanifest">
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to DBU Dashboard</h1>
+        <nav>
+            <a href="./exam_results.html">View Exam Results</a>
+            <a href="./map.html">Campus Map</a>
+            <a href="./index.html">Logout</a>
+        </nav>
+    </header>
+
+    <div id="dashboard-content">
+        <div class="module" id="announcement-module">
+            <h2>Announcements</h2>
+            <ul id="announcement-list">
+                <li>No announcements at this time.</li>
+            </ul>
+        </div>
+
+        <div class="module" id="event-module">
+            <h2>Upcoming Events</h2>
+            <ul id="event-list">
+                <li>No upcoming events scheduled.</li>
+            </ul>
+        </div>
+
+        <div class="module" id="notification-module">
+            <h2>Notifications</h2>
+            <ul id="notification-list">
+                <li>No new notifications.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./JS/dashboard.js"></script>
+</body>
+
+</html>

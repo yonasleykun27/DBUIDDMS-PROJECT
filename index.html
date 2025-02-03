@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DBU Info Desk</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" href="./img/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="./img/favicon_io/site.webmanifest">
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./img/download.jfif" alt="Welcome to DBU" class="page-image">
+        <h2>DBU Information Desk </h2>
+
+        <div id="login-form">
+            <h3>Login</h3>
+            <form id="loginForm">
+                <label for="role">Select Role:</label>
+                <select id="role">
+                    <option value="student">Student</option>
+                    <option value="visitor">Visitor</option>
+                    <option value="staff">Staff</option>
+                    <option value="admin">Administrator</option>
+                </select>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" required>
+                    <span class="password-toggle" onclick="togglePasswordVisibility()">
+                        <i id="password-eye" class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <button type="button" onclick="login()">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign Up</a></p>
+        </div>
+
+        <div id="signup-form" style="display: none;">
+            <h3>Sign Up</h3>
+            <form id="signupForm">
+                <label for="signupRole">Role:</label>
+                <select id="signupRole">
+                    <option value="student">Student</option>
+                    <option value="visitor">Visitor</option>
+                </select>
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" required>
+                <label for="signupPassword">Password:</label>
+                <div class="password-wrapper">
+                    <input type="password" id="signupPassword" required>
+                    <span class="password-toggle" onclick="togglePasswordVisibilitySignup()">
+                        <i id="password-eye-signup" class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <button type="button" onclick="signup()">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+        </div>
+
+    </div>
+    <script src="./JS/script.js"></script>
+    <script>
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    background-image: url(../img/stu_bac.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.page-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 50%;
+    height: auto;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #007bff;
+}
+
+.admin-links {
+    display: flex;
+    gap: 20px;
+}
+
+.admin-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-links a:hover {
+    background-color: #0056b3;
+}
