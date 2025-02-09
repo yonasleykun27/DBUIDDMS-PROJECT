@@ -92,8 +92,6 @@ function formatDateTime(datetimeString) {
     return datetime.toLocaleDateString(undefined, options);
 }
 
-
-// Event listeners for messages from other windows (announcements, events, notifications)
 window.addEventListener('message', (event) => {
     switch (event.data) {
         case 'announcementUpdated':

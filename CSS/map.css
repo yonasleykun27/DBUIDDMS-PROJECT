@@ -43,26 +43,92 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 #building-selection {
     margin-bottom: 20px;
-    display: flex; 
-    gap: 10px; 
+    display: flex;
+    gap: 10px;
+    width: 90%; /* Make the selection area responsive */
+    max-width: 600px; /* Set a maximum width */
 }
 
-#category-select, #location-select {
+#category-select,
+#location-select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    flex: 1; /* Make selects take equal width */
 }
 
 #map-container {
     width: 90%;
-    height: 500px; 
+    height: 500px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
+
+
+/* Media Queries */
+
+@media (max-width: 768px) { /* Mobile */
+    #building-selection {
+        flex-direction: column; /* Stack selects vertically */
+        gap: 10px; /* Add some space between them */
+        width: 95%;
+    }
+
+    #category-select,
+    #location-select {
+        flex: none;  /* remove flex from selects */
+        width: 100%; /* Make selects full width */
+        box-sizing: border-box; /* Include padding and border in width */
+    }
+
+    #map-container {
+        height: 300px; /* Adjust map height for mobile */
+    }
+
+    header {
+        padding: 10px; /* Smaller header padding */
+        text-align: center;  /* Center the header content */
+    }
+
+    .site-title {
+        font-size: 1em; /* smaller title */
+    }
+
+    nav a {
+        font-size: 0.9em;  /* Smaller nav font */
+        padding: 8px 12px; /* smaller nav padding */
+        margin: 5px; /* smaller nav margin */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablet */
+    #map-container {
+        height: 400px; /* Adjust map height for tablets */
+    }
+}
+
+@media (min-width: 1025px) { /* Desktop */
+    #map-container {
+        height: 500px; /* Adjust map height for desktops */
+    }
+}
+
+footer {
+    background-color: #004080; 
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+    margin-top: 20px;
+    width: 100%; 
+}
+
+footer p {
+    margin: 0;
+}

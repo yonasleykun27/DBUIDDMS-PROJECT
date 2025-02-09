@@ -2,7 +2,7 @@
 
 body {
     font-family: sans-serif;
-    background-image: url("../img/are-you-color-blind-take-the-color-blind-test-option6.jpg"); 
+    background-image: url("../img/are-you-color-blind-take-the-color-blind-test-option6.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -59,7 +59,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"], 
+input[type="text"],
 select {
     width: 100%;
     padding: 8px;
@@ -131,7 +131,6 @@ table tr:hover {
     background-color: #f0f0f0;
 }
 
-
 #filter-student,
 #filter-subject {
     width: 200px;
@@ -152,4 +151,104 @@ table tr:hover {
 
 .comment-red {
     color: red;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) { /* Mobile */
+    form {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    input[type="text"],
+    select {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+    .edit-button,
+    .clear-button {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+
+    #filter-student,
+    #filter-subject {
+        width: 95%;
+        margin: 10px auto;
+        font-size: 0.9em;
+    }
+
+    /* Hide Midterm, Assignment, and Final columns on mobile */
+    #results-table th:nth-child(3), /* Midterm */
+    #results-table td:nth-child(3),
+    #results-table th:nth-child(4), /* Assignment */
+    #results-table td:nth-child(4),
+    #results-table th:nth-child(5), /* Final */
+    #results-table td:nth-child(5) {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablet */
+    form {
+        width: 70%;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+@media (min-width: 1025px) { /* Desktop */
+    form {
+        width: 500px;
+    }
+
+    table {
+        font-size: 1em;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+footer {
+    background-color: #004080; 
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+    margin-top: 20px;
+    width: 100%; 
+}
+
+footer p {
+    margin: 0;
 }

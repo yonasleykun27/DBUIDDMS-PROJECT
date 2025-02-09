@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     fromSelect.innerHTML = '<option value="current">Current Location</option><option value="maingate">Main Gate</option>';
     document.getElementById('building-selection').insertBefore(fromSelect, categorySelect);
 
-    // 1. Initialize Leaflet map
+    
     const map = L.map(mapContainer).setView([9.6914, 39.6576], 15);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // 2. Building Data (replace with your actual data)
+    
     const buildings = {
         dormitory: [
             { name: "Dormitory 01 (DO-01)", lat: 9.656149508719823, lng: 39.51883515415056     }, 
@@ -92,9 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
     };
 
-    // 3. Populate Location Selects and Attach Event Listeners AFTER populating
+  
     function populateAndAttach(selectElement, category) {
-        selectElement.innerHTML = ""; // Clear options first
+        selectElement.innerHTML = ""; 
 
         buildings[category].forEach(building => {
             const option = document.createElement('option');
@@ -103,21 +103,21 @@ document.addEventListener('DOMContentLoaded', () => {
             selectElement.appendChild(option);
         });
 
-        // Attach the event listener *after* the options are populated
+       
         selectElement.addEventListener('change', () => {
-            updateRoute(); // Call updateRoute instead of directly showing the route
+            updateRoute(); 
         });
     }
 
-    populateAndAttach(locationSelect, categorySelect.value); // Populate locationSelect initially
+    populateAndAttach(locationSelect, categorySelect.value); 
 
     categorySelect.addEventListener('change', () => {
         const selectedCategory = categorySelect.value;
-        populateAndAttach(locationSelect, selectedCategory); // Repopulate locationSelect based on category
+        populateAndAttach(locationSelect, selectedCategory); 
     });
 
 
-    // 4. Routing (Corrected)
+   
     let routingControl;
 
     function showRoute(startLatLng, destinationLatLng) {
@@ -161,21 +161,19 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 startLatLng = await getCurrentLocation();
             } catch (error) {
-                alert(error); // Or handle the error more gracefully
-                return; // Don't proceed with routing if location fails
+                alert(error); 
+                return; 
             }
         } else {
-            startLatLng = L.latLng(9.65896028989104, 39.519415852401586); // Main Gate    
+            startLatLng = L.latLng(9.65896028989104, 39.519415852401586);   
         }
 
         showRoute(startLatLng, destinationLatLng);
     }
 
-    // Initial route (optional - you might want to remove this)
-    // updateRoute(); // Show route from main gate initially
 
-    fromSelect.addEventListener('change', updateRoute); // Update route when "From" changes
-    categorySelect.addEventListener('change', updateRoute); // Update route when category changes
-    locationSelect.addEventListener('change', updateRoute); // Update route when location changes
+    fromSelect.addEventListener('change', updateRoute); 
+    categorySelect.addEventListener('change', updateRoute); 
+    locationSelect.addEventListener('change', updateRoute); 
 
 });

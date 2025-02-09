@@ -1,7 +1,7 @@
 // announcements.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    displaySentAnnouncements(); // Display sent announcements on page load
+    displaySentAnnouncements(); 
 });
 
 function sendMessage() {
@@ -18,9 +18,8 @@ function sendMessage() {
 
     alert("Announcement sent!");
     document.getElementById('message').value = "";
-    displaySentAnnouncements();  // Update the sent announcements list
+    displaySentAnnouncements(); 
 
-    // Send message to dashboard to update its announcements area
     if (window.opener) {
         window.opener.postMessage('announcementUpdated', '*');
     } else {
@@ -45,9 +44,9 @@ function clearAllAnnouncements() {
 
 function displaySentAnnouncements() {
     const sentAnnouncementsArea = document.getElementById('sent-announcements');
-    const sentAnnouncementsList = document.createElement('ul'); // Create a <ul>
-    sentAnnouncementsArea.innerHTML = "<h2>Sent Announcements</h2>"; // Clear existing content
-    sentAnnouncementsArea.appendChild(sentAnnouncementsList); // Add the <ul> to the div
+    const sentAnnouncementsList = document.createElement('ul'); 
+    sentAnnouncementsArea.innerHTML = "<h2>Sent Announcements</h2>"; 
+    sentAnnouncementsArea.appendChild(sentAnnouncementsList); 
 
     const announcements = getFromLocalStorage('dbu_announcements');
 

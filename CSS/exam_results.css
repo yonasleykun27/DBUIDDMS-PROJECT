@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-image: url("../img/exam-results-are-written-on-a-green-background-with-a-notebook-pens-photo.jpg"); 
+    background-image: url("../img/exam-results-are-written-on-a-green-background-with-a-notebook-pens-photo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -49,7 +49,7 @@ nav a:hover {
 main {
     padding: 20px;
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
@@ -140,4 +140,141 @@ tr:hover {
 #gpa-section {
     margin-top: 20px;
     text-align: center;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) { /* Mobile */
+    main {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    #results-container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: calc(100% - 30px); /* Maintain space for eye icon */
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    table {
+        font-size: 0.8em; /* Smaller table font */
+    }
+
+    th,
+    td {
+        padding: 6px; /* Smaller cell padding */
+    }
+
+    #gpa-section {
+        font-size: 0.9em;
+    }
+    
+    table th:last-child,
+    table td:last-child {
+    display: none;
+}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablet */
+    main {
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    #results-container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    #gpa-section {
+        font-size: 1em;
+    }
+}
+
+
+@media (min-width: 1025px) { /* Desktop */
+    main {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    #results-container {
+        padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 1.1em;
+    }
+
+    button {
+        font-size: 1.1em;
+        padding: 12px 18px;
+    }
+
+    table {
+        font-size: 1em;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    #gpa-section {
+        font-size: 1.1em;
+    }
+}
+
+footer {
+    background-color: #004080; 
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+    margin-top: 20px;
+    width: 100%; 
+}
+
+footer p {
+    margin: 0;
 }

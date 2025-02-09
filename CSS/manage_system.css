@@ -1,3 +1,5 @@
+/* manage_system.css */
+
 body {
     font-family: sans-serif;
     background-color: #f4f4f4;
@@ -29,6 +31,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px; /* Add some padding to main */
 }
 
 nav {
@@ -61,6 +64,8 @@ nav a:hover {
 .admin-links {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    justify-content: center; /* Center the links */
 }
 
 .admin-links a {
@@ -75,4 +80,60 @@ nav a:hover {
 
 .admin-links a:hover {
     background-color: #0056b3;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) { /* Mobile */
+    .admin-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links horizontally */
+        gap: 10px; /* Reduce gap between links */
+    }
+
+    .admin-links a {
+        width: 100%; /* Make links take full width */
+        text-align: center; /* Center text inside links */
+        padding: 10px; /* Adjust padding if needed */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav items */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    .site-title {
+        margin-bottom: 10px; /* Add some space below the title */
+    }
+
+    nav a {
+        margin: 5px 0; /* Add space between stacked nav links */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    main {
+        padding: 10px; /* Reduce main padding on mobile */
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Tablet */
+    .admin-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+footer {
+    background-color: #004080; 
+    color: white;
+    text-align: center;
+    padding: 10px 0; 
+    margin-top: 20px;
+    width: 100%; 
+}
+
+footer p {
+    margin: 0;
 }
